@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-ns",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "stylelint config ready to be used in multiple projects",
   "keywords": [
     "stylelint",

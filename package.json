@@ -1,0 +1,36 @@
+{
+  "name": "stylelint-config-ns",
+  "version": "0.0.1",
+  "description": "stylelint config ready to be used in multiple projects",
+  "keywords": [
+    "stylelint",
+    "stylelint-config"
+  ],
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "stylelint.config.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natterstefan/stylelint-config-ns.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefan Natter <stefan@natter.at>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/natterstefan/stylelint-config-ns/issues"
+  },
+  "homepage": "https://github.com/natterstefan/stylelint-config-ns#readme",
+  "peerDependencies": {
+    "stylelint": "9.2.0",
+    "stylelint-config-sass-guidelines": "5.0.0"
+  },
+  "dependencies": {
+    "stylelint-config-airbnb": "16.1.0",
+    "stylelint": "9.2.0",
+    "stylelint-config-sass-guidelines": "5.0.0"
+  }
+}

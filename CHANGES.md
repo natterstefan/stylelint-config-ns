@@ -6,6 +6,12 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][1]
 
+## 2018/08/25 0.1.1
+
+### Removed
+
+- Removed invalid package from package.json
+
 ## 2018/08/25 [0.1.0][2]
 
 ### Added

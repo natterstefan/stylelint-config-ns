@@ -29,7 +29,6 @@
     "stylelint-config-sass-guidelines": "5.0.0"
   },
   "dependencies": {
-    "stylelint-config-airbnb": "16.1.0",
     "stylelint": "9.2.0",
     "stylelint-config-sass-guidelines": "5.0.0"
   }

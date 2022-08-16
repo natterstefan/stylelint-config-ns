@@ -1,25 +1,75 @@
-/* global module */
+/**
+ * NOTE: ./.vscode/settings.json contains additional configuration to make
+ * stylelint work smoothly with VS Code.
+ *
+ * ## Ressources
+ * - https://github.com/stylelint/awesome-stylelint
+ * - https://github.com/hipstersmoothie/stylelint-formatter-github
+ *
+ * @type {import('stylelint').Config}
+ */
 module.exports = {
-  extends: 'stylelint-config-sass-guidelines',
   ignoreFiles: [
-    './coverage/**/*',
-    './dist/**/*',
-    './node_modules/**/*',
-    './src/**/__snapshots__/**/*',
+    './**/__generated__/**/*',
+    './**/__snapshots__/**/*',
+    './**/build/**/*',
+    './**/coverage/**/*',
+    './**/node_modules/**/*',
+    './**/public/**',
+    './**/storybook-static/**/*',
+    './**/tmp/**/*',
   ],
-  rules: {
-    'max-nesting-depth': 2,
-    // stylelint-config-sass-guidelines requires
-    // you to omit the '.scss' ending in @import statements. But in combination
-    // with webpack we still need it.
-    'scss/at-import-partial-extension-blacklist': null,
-    // Enforce BEM class patterns, inspired by
-    // - https://github.com/simonsmith/stylelint-selector-bem-pattern/issues/23#issuecomment-279216443
-    // - https://github.com/bjankord/stylelint-config-sass-guidelines/issues/20#issuecomment-349972873
-    // probably it can be achieved with them too:
-    // - https://github.com/simonsmith/stylelint-selector-bem-pattern
-    // - https://github.com/postcss/postcss-bem-linter
-    'selector-class-pattern':
-      '^(?:(?:o|c|u|t|s|is|has|_|js|qa)-)?[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*(?:__[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:--[a-zA-Z0-9]+(?:-[a-zA-Z0-9]+)*)?(?:\\[.+\\])?$',
-  },
+  extends: [
+    // @see https://github.com/stylelint/stylelint-config-recommended
+    'stylelint-config-recommended',
+    // @see https://github.com/prettier/stylelint-config-prettier
+    'stylelint-config-prettier',
+  ],
+  overrides: [
+    {
+      files: ['./**/*.css', './**/*.scss'],
+      /**
+       * Why not postcss-sass as suggested in the [migration guide][1]? Because of
+       * this issue: https://github.com/stylelint/stylelint/issues/4711#issuecomment-617145131.
+       *
+       * [1]: https://stylelint.io/migration-guide/to-14/
+       */
+      customSyntax: 'postcss-scss',
+      rules: {
+        'max-nesting-depth': 2,
+        // @see https://tailwindcss.com/docs/functions-and-directives#directives
+        'at-rule-no-unknown': [
+          true,
+          {
+            ignoreAtRules: [
+              'apply',
+              'layer',
+              'responsive',
+              'screen',
+              'tailwind',
+              'variants',
+            ],
+          },
+        ],
+        // @see https://tailwindcss.com/docs/functions-and-directives#functions
+        'function-no-unknown': [
+          true,
+          {
+            ignoreFunctions: ['screen', 'theme'],
+          },
+        ],
+      },
+    },
+    /**
+     * The @stylelint/postcss-css-in-js package has issues...
+     * @see https://github.com/stylelint/stylelint/issues/4574
+     *
+     * The current setup/solution is based on the suggestion here:
+     * @see https://github.com/stylelint/stylelint/issues/4574#issuecomment-1004691530
+     */
+    {
+      files: ['./**/*.ts', './**/*.tsx'],
+      customSyntax: '@stylelint/postcss-css-in-js',
+    },
+  ],
 }

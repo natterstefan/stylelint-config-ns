@@ -1,0 +1,37 @@
+{
+  /**
+   * Disable CSS validation in VS Code, to allow @tailwind import and the @apply
+   * syntax in VS Code.
+   *
+   * Enable stylelint to ensure CSS is still validated though.
+   *
+   * Docs:
+   * - @see https://stackoverflow.com/a/62093553/1238150
+   * - @see https://github.com/microsoft/vscode/issues/103163#issuecomment-672272020
+   * - @see https://www.meidev.co/blog/visual-studio-code-css-linting-with-tailwind/
+   */
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  /**
+   * STYLELINT SETUP
+   */
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "scss", "typescript", "typescriptreact"],
+
+  /** EDITOR FORMATING*/
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  /**
+   * EDITOR UX
+   */
+  "editor.rulers": [80],
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "files.eol": "\n"
+}

@@ -45,7 +45,7 @@ git add CHANGELOG && git commit -m "chore: prepare release"
 git tag <version>
 
 # push changes and the tag
-git push && git push --follow-tags
+git push && git push --tags
 
 # publish the release
 yarn publish

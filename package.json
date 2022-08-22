@@ -12,6 +12,7 @@
     "node": "^14.0.0 || ^16.0.0"
   },
   "scripts": {
+    "prepublish": "yarn test",
     "test": "stylelint example"
   },
   "peerDependencies": {

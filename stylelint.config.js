@@ -1,10 +1,10 @@
 /**
- * NOTE: ./.vscode/settings.json contains additional configuration to make
+ * NOTE: .vscode/settings.json contains additional configuration to make
  * stylelint work smoothly with VS Code.
  *
  * ## Ressources
- * - https://github.com/stylelint/awesome-stylelint
- * - https://github.com/hipstersmoothie/stylelint-formatter-github
+ * - @see https://github.com/stylelint/awesome-stylelint
+ * - @see https://github.com/hipstersmoothie/stylelint-formatter-github
  *
  * @type {import('stylelint').Config}
  */
@@ -17,7 +17,6 @@ module.exports = {
     './**/node_modules/**/*',
     './**/public/**',
     './**/storybook-static/**/*',
-    './**/tmp/**/*',
   ],
   extends: [
     // @see https://github.com/stylelint/stylelint-config-recommended
@@ -29,8 +28,9 @@ module.exports = {
     {
       files: ['./**/*.css', './**/*.scss'],
       /**
-       * Why not postcss-sass as suggested in the [migration guide][1]? Because of
-       * this issue: https://github.com/stylelint/stylelint/issues/4711#issuecomment-617145131.
+       * Why not postcss-sass as suggested in the [migration guide][1]?
+       * Because of this issue:
+       * @see https://github.com/stylelint/stylelint/issues/4711#issuecomment-617145131
        *
        * [1]: https://stylelint.io/migration-guide/to-14/
        */

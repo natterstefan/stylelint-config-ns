@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-ns",
-  "description": "stylelint config ready to be used in multiple projects",
+  "description": "Stylelint config with pre-configured Sass (`.scss`), Tailwind, CSS-in-JS (`.ts` and `.tsx`), PostCSS and Prettier support.",
   "version": "0.1.1",
   "author": "Stefan Natter <stefan@natter.at>",
   "license": "MIT",
@@ -9,20 +9,20 @@
     "test": "stylelint example"
   },
   "peerDependencies": {
-    "stylelint": "^14.10.0"
+    "stylelint": "^14.11.0"
   },
   "dependencies": {
-    "@stylelint/postcss-css-in-js": "0.38.0",
-    "postcss-scss": "4.0.4",
-    "postcss-syntax": "0.36.2",
-    "stylelint-config-prettier": "9.0.3",
-    "stylelint-config-recommended": "9.0.0"
+    "@stylelint/postcss-css-in-js": "^0.38.0",
+    "postcss-scss": "^4.0.4",
+    "postcss-syntax": "^0.36.2",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended": "^9.0.0"
   },
   "devDependencies": {
     "eslint": "8.22.0",
     "eslint-config-ns": "3.3.0",
     "prettier": "2.7.1",
-    "stylelint": "14.10.0"
+    "stylelint": "^14.11.0"
   },
   "files": [
     "index.js",
@@ -30,7 +30,9 @@
   ],
   "keywords": [
     "stylelint",
-    "stylelint-config"
+    "stylelint-config",
+    "stylelint-prettier",
+    "stylelint-eslint"
   ],
   "repository": {
     "type": "git",

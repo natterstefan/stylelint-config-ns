@@ -33,6 +33,18 @@ The following configurations are used and preconfigured:
 - [stylelint/stylelint-config-recommended: The recommended shareable config for Stylelint](https://github.com/stylelint/stylelint-config-recommended)
 - [prettier/stylelint-config-prettier: Turns off all rules that are unnecessary or might conflict with prettier.](https://github.com/prettier/stylelint-config-prettier)
 
+## Development
+
+### How to publish
+
+```sh
+# prepare the CHANGELOG (new release headline), commit and push changes
+git add CHANGELOG && git commit -m "chore: prepare release"
+
+# publish the release
+yarn publish
+```
+
 ## License
 
 [MIT](./LICENSE)

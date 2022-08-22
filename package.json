@@ -1,35 +1,52 @@
 {
   "name": "stylelint-config-ns",
+  "description": "Stylelint config with pre-configured Sass (`.scss`), Tailwind, CSS-in-JS (`.ts` and `.tsx`), PostCSS and Prettier support.",
   "version": "0.1.1",
-  "description": "stylelint config ready to be used in multiple projects",
-  "keywords": [
-    "stylelint",
-    "stylelint-config"
-  ],
+  "author": {
+    "name": "Stefan Natter",
+    "url": "https://natterstefan.me>"
+  },
+  "license": "MIT",
   "main": "index.js",
+  "engines": {
+    "node": "^14.0.0 || ^16.0.0"
+  },
+  "scripts": {
+    "prepublish": "yarn test",
+    "test": "stylelint example"
+  },
+  "peerDependencies": {
+    "stylelint": "^14.11.0"
+  },
+  "dependencies": {
+    "@stylelint/postcss-css-in-js": "^0.38.0",
+    "postcss-scss": "^4.0.4",
+    "postcss-syntax": "^0.36.2",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended": "^9.0.0"
+  },
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "eslint-config-ns": "3.3.0",
+    "prettier": "2.7.1",
+    "stylelint": "^14.11.0"
+  },
   "files": [
     "index.js",
     "stylelint.config.js"
+  ],
+  "keywords": [
+    "stylelint",
+    "stylelint-config",
+    "stylelint-prettier",
+    "stylelint-eslint"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/natterstefan/stylelint-config-ns.git"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Stefan Natter <stefan@natter.at>",
-  "license": "MIT",
   "bugs": {
     "url": "https://github.com/natterstefan/stylelint-config-ns/issues"
   },
-  "homepage": "https://github.com/natterstefan/stylelint-config-ns#readme",
-  "peerDependencies": {
-    "stylelint": "9.2.0",
-    "stylelint-config-sass-guidelines": "5.0.0"
-  },
-  "dependencies": {
-    "stylelint": "9.2.0",
-    "stylelint-config-sass-guidelines": "5.0.0"
-  }
+  "homepage": "https://github.com/natterstefan/stylelint-config-ns#readme"
 }

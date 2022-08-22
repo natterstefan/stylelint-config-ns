@@ -1,0 +1,16 @@
+.app {
+  @apply bg-blue-500;
+
+  .planet {
+    text-decoration: underline;
+
+    .earth {
+      color: red;
+
+      /* stylelint-disable-next-line max-nesting-depth */
+      .hello {
+        font-size: smaller;
+      }
+    }
+  }
+}

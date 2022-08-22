@@ -1,0 +1,54 @@
+name: Node CI
+
+on:
+  # Allow to trigger the workflow manually again via the GitHub UI
+  # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_call
+  workflow_call:
+  # Allow to trigger the workflow manually via the GitHub UI and also allow to
+  # select a custom branch
+  # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_dispatch
+  workflow_dispatch:
+  # Trigger the workflow when a pull_request's activity type is opened,
+  # synchronize, or reopened.
+  # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#pull_request
+  pull_request:
+  # Trigger the workflow on push
+  # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#push
+  push:
+    branches:
+      - master
+  # Runs "At 05:00 on Monday." (see https://crontab.guru/#0_5_*_*_1)
+  # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
+  schedule:
+    - cron: "0 5 * * 1"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # add secrets not added in .env, .env.development, .env.production, or .env.test
+  EXTERNAL_API_KEY: ${{ secrets.EXTERNAL_API_KEY }}
+  PREVIEW_SECRET: ${{ secrets.PREVIEW_SECRET }}
+  REVALIDATION_SECRET: ${{ secrets.REVALIDATION_SECRET }}
+  SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+  SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+
+jobs:
+  validate:
+    runs-on: self-hosted
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: "yarn"
+
+      - uses: bahmutov/npm-install@4f2c2de39846f27e0034cb0f2485a8212ed1edfa
+        with:
+          install-command:
+            yarn --prefer-offline --frozen-lockfile --no-progress --silent
+
+      - run: yarn test

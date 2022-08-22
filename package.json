@@ -1,7 +1,7 @@
 {
   "name": "stylelint-config-ns",
   "description": "Stylelint config with pre-configured Sass (`.scss`), Tailwind, CSS-in-JS (`.ts` and `.tsx`), PostCSS and Prettier support.",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": {
     "name": "Stefan Natter",
     "url": "https://natterstefan.me>"

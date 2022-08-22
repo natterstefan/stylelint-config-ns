@@ -16,7 +16,7 @@ on:
   # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#push
   push:
     branches:
-      - master
+      - main
   # Runs "At 05:00 on Monday." (see https://crontab.guru/#0_5_*_*_1)
   # @see https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule
   schedule:

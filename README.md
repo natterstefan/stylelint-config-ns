@@ -41,11 +41,8 @@ The following configurations are used and preconfigured:
 # prepare the CHANGELOG (new release headline)
 git add CHANGELOG && git commit -m "chore: prepare release"
 
-# example `git tag v1.0.0`
-git tag <version>
-
-# push changes and the tag
-git push && git push --tags
+# push changes
+git push
 
 # publish the release
 yarn publish

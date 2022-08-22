@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/natterstefan/stylelint-config-ns#readme",
   "peerDependencies": {
-    "stylelint": "9.2.0",
+    "stylelint": "9.10.1",
     "stylelint-config-sass-guidelines": "5.0.0"
   },
   "dependencies": {
-    "stylelint": "9.2.0",
+    "stylelint": "9.10.1",
     "stylelint-config-sass-guidelines": "5.0.0"
   }
 }

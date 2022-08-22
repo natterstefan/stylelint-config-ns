@@ -12,6 +12,7 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 - added preconfigured Sass (`.scss`), Tailwind, CSS-in-JS (`.ts` and `.tsx`),
   PostCSS and Prettier support.
 - requires Node Version 14 or 16.
+- **Breaking**: removed support for `stylelint-config-sass-guidelines`
 
 ## 2018/08/25 [0.1.1][https://github.com/natterstefan/stylelint-config-ns/releases/tag/v0.1.1]
 

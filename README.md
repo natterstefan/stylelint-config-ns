@@ -1,5 +1,9 @@
 # stylelint-config-ns
 
+[![npm version](https://badge.fury.io/js/stylelint-config-ns.svg)](https://badge.fury.io/js/stylelint-config-ns)
+[![GitHub license](https://img.shields.io/github/license/natterstefan/stylelint-config-ns.svg)](https://github.com/natterstefan/stylelint-config-ns/blob/main/LICENCE)
+[![Node CI](https://github.com/natterstefan/stylelint-config-ns/actions/workflows/ci.yml/badge.svg)](https://github.com/natterstefan/stylelint-config-ns/actions/workflows/ci.yml)
+
 > Stylelint config with pre-configured Sass (`.scss`), Tailwind, CSS-in-JS
 > (`.ts` and `.tsx`), PostCSS and Prettier support.
 

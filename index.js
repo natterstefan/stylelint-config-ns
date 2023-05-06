@@ -1,3 +1,3 @@
-const stylelint = require("./stylelint.config");
+const stylelint = require('./stylelint.config')
 
-module.exports = stylelint;
+module.exports = stylelint

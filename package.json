@@ -10,40 +10,40 @@
   "license": "MIT",
   "main": "index.js",
   "engines": {
-    "node": "^14.0.0 || ^16.0.0"
+    "node": "^16.0.0 || ^18.0.0"
   },
   "scripts": {
     "prepublish": "yarn test",
     "test": "stylelint example"
   },
   "peerDependencies": {
-    "prettier": "^2.7.1",
-    "stylelint": "^14.11.0",
-    "tailwind": "^3.1.0"
+    "prettier": "^2.8.8",
+    "stylelint": "^15.6.1",
+    "tailwindcss": "^3.3.2"
   },
   "peerDependenciesMeta": {
     "prettier": {
       "optional": true
     },
-    "tailwind": {
+    "tailwindcss": {
       "optional": true
     }
   },
   "dependencies": {
     "@stylelint/postcss-css-in-js": "^0.38.0",
-    "postcss": "^8.4.16",
-    "postcss-scss": "^4.0.4",
+    "postcss": "^8.4.23",
+    "postcss-scss": "^4.0.6",
     "postcss-syntax": "^0.36.2",
-    "stylelint-config-prettier": "^9.0.3",
-    "stylelint-config-recommended": "^9.0.0"
+    "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-recommended": "^12.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.22.0",
-    "eslint-config-ns": "^3.3.0",
-    "prettier": "^2.7.1",
-    "stylelint": "^14.11.0",
-    "tailwindcss": "^3.1.8",
-    "typescript": "^4.7.4"
+    "eslint": "^8.40.0",
+    "eslint-config-ns": "^3.5.0",
+    "prettier": "^2.8.8",
+    "stylelint": "^15.6.1",
+    "tailwindcss": "^3.3.2",
+    "typescript": "^5.0.4"
   },
   "files": [
     "index.js",

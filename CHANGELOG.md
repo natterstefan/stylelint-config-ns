@@ -4,12 +4,13 @@ All notable changes to this project will be documented here. The format is based
 on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project
 adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## 2.0.0 (2023-07-31)
 
 ### Features
 
 - Updated all (dev)Dependencies
-- Min. required node version is now 16
+- Min. required Node version is now 18 (dropped Node 16)
+- added support for Node 18 and 20
 
 ## 1.0.0 (2022-08-22)
 

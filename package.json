@@ -10,7 +10,7 @@
   "license": "MIT",
   "main": "index.js",
   "engines": {
-    "node": "^16.0.0 || ^18.0.0 || ^20.0.0"
+    "node": "^18.0.0 || ^20.0.0"
   },
   "scripts": {
     "lint": "yarn eslint --ext .js,.ts,.tsx .",
@@ -18,7 +18,7 @@
     "test": "stylelint example"
   },
   "peerDependencies": {
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "stylelint": "^15.10.2",
     "tailwindcss": "^3.3.3"
   },
@@ -40,8 +40,8 @@
   },
   "devDependencies": {
     "eslint": "^8.46.0",
-    "eslint-config-ns": "^3.5.0",
-    "prettier": "^2.8.8",
+    "eslint-config-ns": "^4.0.0",
+    "prettier": "^3.0.0",
     "stylelint": "^15.10.2",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"

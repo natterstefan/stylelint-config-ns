@@ -10,7 +10,7 @@
   "license": "MIT",
   "main": "index.js",
   "engines": {
-    "node": "^16.0.0 || ^18.0.0 || ^20.0.0"
+    "node": "^18.0.0 || ^20.0.0"
   },
   "scripts": {
     "lint": "yarn eslint --ext .js,.ts,.tsx .",

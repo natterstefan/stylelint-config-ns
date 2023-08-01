@@ -18,6 +18,7 @@
     "test": "stylelint example"
   },
   "peerDependencies": {
+    "postcss": "^8.4.27",
     "prettier": "^3.0.0",
     "stylelint": "^15.10.2",
     "tailwindcss": "^3.3.3"

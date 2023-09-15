@@ -60,16 +60,5 @@ module.exports = {
         ],
       },
     },
-    /**
-     * The @stylelint/postcss-css-in-js package has issues...
-     * @see https://github.com/stylelint/stylelint/issues/4574
-     *
-     * The current setup/solution is based on the suggestion here:
-     * @see https://github.com/stylelint/stylelint/issues/4574#issuecomment-1004691530
-     */
-    {
-      files: ['./**/*.ts', './**/*.tsx'],
-      customSyntax: '@stylelint/postcss-css-in-js',
-    },
   ],
 }

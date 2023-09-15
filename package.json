@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "stylelint-config-ns",
-  "description": "Stylelint config with pre-configured Sass (`.scss`), Tailwind, CSS-in-JS (`.ts` and `.tsx`), PostCSS and Prettier support.",
+  "description": "Stylelint config with CSS (`.(s)css`), Tailwind, PostCSS and Prettier support.",
   "version": "2.0.0",
   "author": {
     "name": "Stefan Natter",
@@ -13,14 +13,14 @@
     "node": "^18.0.0 || ^20.0.0"
   },
   "scripts": {
-    "lint": "yarn eslint --ext .js,.ts,.tsx .",
+    "lint": "eslint \"./**/*.js\"",
     "prepublish": "yarn test",
     "test": "stylelint example"
   },
   "peerDependencies": {
-    "postcss": "^8.4.27",
-    "prettier": "^3.0.0",
-    "stylelint": "^15.10.2",
+    "postcss": "^8.4.29",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
     "tailwindcss": "^3.3.3"
   },
   "peerDependenciesMeta": {
@@ -32,18 +32,19 @@
     }
   },
   "dependencies": {
-    "@stylelint/postcss-css-in-js": "^0.38.0",
-    "postcss": "^8.4.27",
-    "postcss-scss": "^4.0.6",
+    "postcss": "^8.4.29",
+    "postcss-scss": "^4.0.8",
     "postcss-syntax": "^0.36.2",
     "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended": "^13.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.46.0",
+    "@babel/core": "^7.22.19",
+    "@babel/eslint-parser": "^7.22.15",
+    "eslint": "^8.49.0",
     "eslint-config-ns": "^4.0.0",
-    "prettier": "^3.0.0",
-    "stylelint": "^15.10.2",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.10.3",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.1.6"
   },
